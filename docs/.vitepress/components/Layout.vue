@@ -20,16 +20,8 @@ const SpotlightBackground = defineAsyncComponent({
   delay: 100
 })
 
-const Analytics = defineAsyncComponent({
-  loader: () => import('@vercel/analytics/vue').then(module => module.Analytics),
-  loadingComponent: {
-    template: '<div></div>'
-  },
-  delay: 0
-})
-
-const SpeedInsights = defineAsyncComponent({
-  loader: () => import('@vercel/speed-insights/vue').then(module => module.SpeedInsights),
+const VercelAnalytics = defineAsyncComponent({
+  loader: () => import('./VercelAnalytics.vue'),
   loadingComponent: {
     template: '<div></div>'
   },
@@ -92,8 +84,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <Analytics />
-  <SpeedInsights />
+  <VercelAnalytics />
   <DefaultTheme.Layout>
     <template #home-hero-before>
       <SpotlightBackground v-show="isHome">
