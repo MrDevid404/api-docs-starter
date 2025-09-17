@@ -1,0 +1,551 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "API Documentation Starter",
+    "description": "Un modèle moderne de documentation d'API qui démontre les meilleures pratiques REST API avec des exemples interactifs",
+    "version": "1.0.0",
+    "termsOfService": "https://example.com/terms",
+    "contact": {
+      "name": "Support API",
+      "email": "support@example.com",
+      "url": "https://example.com/support"
+    },
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://api.example.com/v1",
+      "description": "Serveur de production"
+    },
+    {
+      "url": "https://staging-api.example.com/v1",
+      "description": "Serveur de staging"
+    },
+    {
+      "url": "http://localhost:3000/v1",
+      "description": "Serveur de développement"
+    }
+  ],
+  "security": [
+    {
+      "BearerAuth": []
+    }
+  ],
+  "paths": {
+    "/users": {
+      "get": {
+        "summary": "Lister les utilisateurs",
+        "description": "Récupère une liste paginée d'utilisateurs avec des options de filtrage et de tri",
+        "tags": ["Utilisateurs"],
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Numéro de page pour la pagination",
+            "schema": {
+              "type": "integer",
+              "default": 1,
+              "minimum": 1
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "Nombre d'éléments par page",
+            "schema": {
+              "type": "integer",
+              "default": 20,
+              "minimum": 1,
+              "maximum": 100
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "Champ et direction de tri",
+            "schema": {
+              "type": "string",
+              "enum": ["name:asc", "name:desc", "created_at:asc", "created_at:desc"],
+              "default": "created_at:desc"
+            }
+          },
+          {
+            "name": "search",
+            "in": "query",
+            "description": "Terme de recherche pour filtrer les utilisateurs",
+            "schema": {
+              "type": "string",
+              "maxLength": 100
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Réponse réussie",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/User"
+                      }
+                    },
+                    "pagination": {
+                      "$ref": "#/components/schemas/Pagination"
+                    },
+                    "links": {
+                      "$ref": "#/components/schemas/Links"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Requête invalide - Paramètres invalides"
+          },
+          "401": {
+            "description": "Non autorisé - Authentification invalide ou manquante"
+          },
+            "429": {
+            "description": "Trop de requêtes - Limite de débit dépassé"
+          },
+          "500": {
+            "description": "Erreur interne du serveur"
+          }
+        }
+      },
+      "post": {
+        "summary": "Créer un utilisateur",
+        "description": "Crée un nouveau compte utilisateur",
+        "tags": ["Utilisateurs"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateUserRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Utilisateur créé avec succès",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "$ref": "#/components/schemas/User"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Requête invalide - Données d'entrée invalides"
+          },
+          "409": {
+            "description": "Conflit - L'utilisateur existe déjà"
+          },
+          "422": {
+            "description": "Erreur de validation"
+          }
+        }
+      }
+    },
+    "/users/{userId}": {
+      "get": {
+        "summary": "Obtenir un utilisateur par ID",
+        "description": "Récupère un utilisateur spécifique par son identifiant unique",
+        "tags": ["Utilisateurs"],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "description": "Identifiant unique de l'utilisateur",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Réponse réussie",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "$ref": "#/components/schemas/User"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Utilisateur non trouvé"
+          }
+        }
+      },
+      "put": {
+        "summary": "Mettre à jour un utilisateur",
+        "description": "Met à jour les informations d'un utilisateur existant",
+        "tags": ["Utilisateurs"],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "description": "Identifiant unique de l'utilisateur",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateUserRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Utilisateur mis à jour avec succès",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "$ref": "#/components/schemas/User"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Requête invalide - Données d'entrée invalides"
+          },
+          "404": {
+            "description": "Utilisateur non trouvé"
+          },
+          "422": {
+            "description": "Erreur de validation"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Supprimer un utilisateur",
+        "description": "Supprime un compte utilisateur",
+        "tags": ["Utilisateurs"],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "description": "Identifiant unique de l'utilisateur",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Utilisateur supprimé avec succès"
+          },
+          "404": {
+            "description": "Utilisateur non trouvé"
+          }
+        }
+      }
+    },
+    "/health": {
+      "get": {
+        "summary": "Vérification de santé",
+        "description": "Vérifie l'état de santé de l'API",
+        "tags": ["Système"],
+        "responses": {
+          "200": {
+            "description": "API est saine",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "enum": ["healthy", "degraded"],
+                      "example": "healthy"
+                    },
+                    "timestamp": {
+                      "type": "string",
+                      "format": "date-time",
+                      "example": "2024-01-01T00:00:00Z"
+                    },
+                    "version": {
+                      "type": "string",
+                      "example": "1.0.0"
+                    },
+                    "uptime": {
+                      "type": "integer",
+                      "description": "Temps de fonctionnement en secondes",
+                      "example": 3600
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "BearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT",
+        "description": "Token JWT obtenu du endpoint d'authentification"
+      }
+    },
+    "schemas": {
+      "User": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "description": "Identifiant unique de l'utilisateur",
+            "example": "550e8400-e29b-41d4-a716-446655440000"
+          },
+          "name": {
+            "type": "string",
+            "description": "Nom complet de l'utilisateur",
+            "example": "Jean Dupont"
+          },
+          "email": {
+            "type": "string",
+            "format": "email",
+            "description": "Adresse e-mail de l'utilisateur",
+            "example": "jean.dupont@example.com"
+          },
+          "role": {
+            "type": "string",
+            "enum": ["admin", "user", "moderator"],
+            "description": "Rôle de l'utilisateur",
+            "example": "user"
+          },
+          "status": {
+            "type": "string",
+            "enum": ["active", "inactive", "pending"],
+            "description": "Statut du compte",
+            "example": "active"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Timestamp quand l'utilisateur a été créé",
+            "example": "2024-01-01T00:00:00Z"
+          },
+          "updated_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Timestamp quand l'utilisateur a été mis à jour pour la dernière fois",
+            "example": "2024-01-01T00:00:00Z"
+          }
+        },
+        "required": ["id", "name", "email", "role", "status", "created_at", "updated_at"]
+      },
+      "CreateUserRequest": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Nom complet de l'utilisateur",
+            "minLength": 2,
+            "maxLength": 100,
+            "example": "Jean Dupont"
+          },
+          "email": {
+            "type": "string",
+            "format": "email",
+            "description": "Adresse e-mail de l'utilisateur",
+            "example": "jean.dupont@example.com"
+          },
+          "password": {
+            "type": "string",
+            "format": "password",
+            "minLength": 8,
+            "description": "Mot de passe pour le compte utilisateur",
+            "example": "MotDePasseSecurise123!"
+          },
+          "role": {
+            "type": "string",
+            "enum": ["admin", "user", "moderator"],
+            "description": "Rôle de l'utilisateur",
+            "default": "user"
+          }
+        },
+        "required": ["name", "email", "password"]
+      },
+      "UpdateUserRequest": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Nom complet de l'utilisateur",
+            "minLength": 2,
+            "maxLength": 100,
+            "example": "Jean Dupont"
+          },
+          "email": {
+            "type": "string",
+            "format": "email",
+            "description": "Adresse e-mail de l'utilisateur",
+            "example": "jean.dupont@example.com"
+          },
+          "role": {
+            "type": "string",
+            "enum": ["admin", "user", "moderator"],
+            "description": "Rôle de l'utilisateur"
+          },
+          "status": {
+            "type": "string",
+            "enum": ["active", "inactive", "pending"],
+            "description": "Statut du compte"
+          }
+        }
+      },
+      "Pagination": {
+        "type": "object",
+        "properties": {
+          "page": {
+            "type": "integer",
+            "description": "Numéro de page actuel",
+            "example": 1
+          },
+          "limit": {
+            "type": "integer",
+            "description": "Nombre d'éléments par page",
+            "example": 20
+          },
+          "total": {
+            "type": "integer",
+            "description": "Nombre total d'éléments",
+            "example": 100
+          },
+          "total_pages": {
+            "type": "integer",
+            "description": "Nombre total de pages",
+            "example": 5
+          }
+        }
+      },
+      "Links": {
+        "type": "object",
+        "properties": {
+          "self": {
+            "type": "string",
+            "format": "uri",
+            "description": "Lien vers la page actuelle",
+            "example": "https://api.example.com/v1/users?page=1&limit=20"
+          },
+          "next": {
+            "type": "string",
+            "format": "uri",
+            "description": "Lien vers la page suivante",
+            "example": "https://api.example.com/v1/users?page=2&limit=20"
+          },
+          "prev": {
+            "type": "string",
+            "format": "uri",
+            "description": "Lien vers la page précédente",
+            "example": "https://api.example.com/v1/users?page=1&limit=20"
+          },
+          "first": {
+            "type": "string",
+            "format": "uri",
+            "description": "Lien vers la première page",
+            "example": "https://api.example.com/v1/users?page=1&limit=20"
+          },
+          "last": {
+            "type": "string",
+            "format": "uri",
+            "description": "Lien vers la dernière page",
+            "example": "https://api.example.com/v1/users?page=5&limit=20"
+          }
+        }
+      },
+      "Error": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "integer",
+            "description": "Code de statut HTTP",
+            "example": 400
+          },
+          "code": {
+            "type": "string",
+            "description": "Code d'erreur",
+            "example": "INVALID_INPUT"
+          },
+          "message": {
+            "type": "string",
+            "description": "Message d'erreur lisible par l'homme",
+            "example": "Les données d'entrée fournies sont invalides"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "field": {
+                  "type": "string",
+                  "description": "Champ qui a causé l'erreur",
+                  "example": "email"
+                },
+                "message": {
+                  "type": "string",
+                  "description": "Message d'erreur spécifique pour le champ",
+                  "example": "L'adresse e-mail est invalide"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Utilisateurs",
+      "description": "Opérations de gestion des utilisateurs"
+    },
+    {
+      "name": "Système",
+      "description": "Opérations au niveau du système"
+    }
+  ]
+}
