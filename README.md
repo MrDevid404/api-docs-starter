@@ -14,6 +14,8 @@ A modern, professional API documentation template built with VitePress, Vue 3, a
 
 Get your API documentation up and running in minutes.
 
+Latest release: [v0.1.0](https://github.com/rafactx/api-docs-starter/releases/tag/v0.1.0)
+
 ### Prerequisites
 
 - **Node.js** (>=18.0.0)
