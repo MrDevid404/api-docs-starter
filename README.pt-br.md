@@ -7,6 +7,8 @@
 
 Um template moderno e profissional de documentação de API construído com VitePress, Vue 3 e Scalar. Este starter fornece tudo que você precisa para criar documentação de API bonita e interativa com suporte multi-idiomas e a melhor experiência de desenvolvedor.
 
+> **📖 Also available in English**: [README.md](README.md)
+
 ## Início Rápido
 
 Coloque sua documentação de API funcionando em minutos.
@@ -97,30 +99,35 @@ pnpm run preview
 ## Principais Funcionalidades
 
 ### Design Moderno
+
 - **UI inspirada na Apple** com estética limpa e profissional
 - **Tema claro/escuro** com alternância perfeita
 - **Design responsivo** otimizado para todos os dispositivos
 - **Animações suaves** e micro-interações
 
 ### Suporte Multi-idiomas
+
 - **4 idiomas**: Inglês, Português, Espanhol, Francês
 - **Detecção automática de idioma** baseada nas preferências do navegador
 - **Seletor de idioma** com indicadores de bandeira
 - **Especificações OpenAPI localizadas** para cada idioma
 
 ### Referência Interativa da API
+
 - **Integração Scalar** para testes interativos da API
 - **Teste de endpoints ao vivo** diretamente na documentação
 - **Exemplos de código** em múltiplas linguagens de programação
 - **Documentação abrangente de schemas**
 
 ### Performance Otimizada
+
 - **Code splitting** para carregamento otimizado
 - **Lazy loading** para componentes e imagens
 - **Builds otimizados** com tree shaking
 - **Progressive Web App** pronto
 
 ### Experiência do Desenvolvedor
+
 - **TypeScript** para segurança de tipos
 - **Hot module replacement** para desenvolvimento rápido
 - **ESLint + Prettier** para qualidade do código
@@ -144,12 +151,14 @@ Atualize as cores do tema em `docs/.vitepress/theme/theme.css`:
 ### Logo e Recursos
 
 Substitua os logos padrão em `docs/public/`:
+
 - `logo-light.svg` - Logo do tema claro
 - `logo-dark.svg` - Logo do tema escuro
 
 ### Especificação OpenAPI
 
 Personalize a especificação da API em `docs/public/openapi.json`:
+
 1. Atualize a seção `info` com os detalhes da sua API
 2. Adicione seus endpoints e schemas da API
 3. Traduza para outros idiomas se necessário
@@ -157,6 +166,7 @@ Personalize a especificação da API em `docs/public/openapi.json`:
 ### Organização de Conteúdo
 
 Adicione suas páginas de documentação nas respectivas pastas de idioma:
+
 - `docs/en/` - Documentação em inglês
 - `docs/pt/` - Documentação em português
 - `docs/es/` - Documentação em espanhol
@@ -231,11 +241,10 @@ Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICE
 
 ## Suporte
 
-- 📧 **Email**: rafactx@icloud.com
+- 📧 **Email**: [rafactx@icloud.com](mailto:rafactx@icloud.com)
 - 🐛 **Issues**: [GitHub Issues](https://github.com/rafactx/api-docs-starter/issues)
 - 💬 **Discussões**: [GitHub Discussions](https://github.com/rafactx/api-docs-starter/discussions)
 
 ---
 
 Feito com carinho por [rafactx](https://github.com/rafactx) e colaboradores
-
